@@ -58,7 +58,7 @@ describe('Home Component', () => {
     });
 
     expect(screen.getByText(/Torta Test 2/i)).toBeInTheDocument();
-    const productTitles = screen.getAllByText(/Torta Test/i); // CAMBIO AQUÍ
+    const productTitles = screen.getAllByText(/Torta Test/i); 
     expect(productTitles).toHaveLength(mockProductos.length);
   });
 
