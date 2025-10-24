@@ -131,7 +131,7 @@ describe('Registro Component', () => {
         telefono: testData.telefono,
         fechaNacimiento: testData.fechaNacimiento
     }));
-    expect(screen.queryByText(/obligatorio/i)).not.toBeInTheDocument(); // No errors should be visible
+    expect(screen.queryByText(/obligatorio/i)).not.toBeInTheDocument(); 
   });
 
 });
