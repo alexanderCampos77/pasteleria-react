@@ -15,8 +15,8 @@ function CarritoPage({ carrito, setCarrito, usuarioActual }) {
 
   const handleComprar = () => {
     if (!usuarioActual) {
-      alert('Debes iniciar sesión para comprar.');
-      navigate('/login');
+      alert('Debes registrarte o iniciar sesión para comprar.');
+      navigate('/registro'); // CAMBIO AQUÍ
     } else {
       alert(`¡Gracias por tu compra, ${usuarioActual.nombre}! (Simulación)`);
       vaciarCarrito();
@@ -52,10 +52,10 @@ function CarritoPage({ carrito, setCarrito, usuarioActual }) {
           </Table>
           <div className="text-end">
             <h4 className="mb-3">Total: ${calcularTotal().toLocaleString('es-CL')}</h4>
-            <Button variant="danger" onClick={vaciarCarrito} className="me-2">
+            <Button variant="danger" onClick={vaciarCarrito} className="me-2 btn-custom-brown">
               Vaciar Carrito
             </Button>
-            <Button variant="primary" onClick={handleComprar}>
+            <Button variant="primary" onClick={handleComprar} className="btn-custom-brown">
               Comprar
             </Button>
           </div>

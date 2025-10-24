@@ -8,6 +8,7 @@ import CarritoPage from './components/pages/CarritoPage.jsx';
 import LoginPage from './components/pages/LoginPage.jsx';
 import PerfilPage from './components/pages/PerfilPage.jsx';
 import DetalleProducto from './components/pages/DetalleProducto.jsx';
+import Footer from './components/Footer.jsx'; // 1. IMPORTAR FOOTER
 
 function App() {
   const [carrito, setCarrito] = useState([]);
@@ -42,27 +43,31 @@ function App() {
    };
 
   return (
-    <div className="App">
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header
         carrito={carrito}
         usuario={usuarioActual}
         cerrarSesion={cerrarSesion}
       />
-      <Routes>
-        <Route path="/" element={<Home agregarAlCarrito={agregarAlCarrito} />} />
-        <Route path="/registro" element={<Registro registrarUsuario={registrarUsuario} />} />
-        <Route path="/contacto" element={<Contacto />} />
-        <Route
-          path="/carrito"
-          element={<CarritoPage carrito={carrito} setCarrito={setCarrito} usuarioActual={usuarioActual} />}
-        />
-        <Route path="/login" element={<LoginPage iniciarSesion={iniciarSesion} />} />
-        <Route path="/perfil" element={<PerfilPage usuarioActual={usuarioActual} />} />
-        <Route
-            path="/producto/:id"
-            element={<DetalleProducto agregarAlCarrito={agregarAlCarrito} />}
-         />
-      </Routes>
+      {}
+      <main style={{ flex: '1 0 auto' }}>
+        <Routes>
+          <Route path="/" element={<Home agregarAlCarrito={agregarAlCarrito} />} />
+          <Route path="/registro" element={<Registro registrarUsuario={registrarUsuario} />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route
+            path="/carrito"
+            element={<CarritoPage carrito={carrito} setCarrito={setCarrito} usuarioActual={usuarioActual} />}
+          />
+          <Route path="/login" element={<LoginPage iniciarSesion={iniciarSesion} />} />
+          <Route path="/perfil" element={<PerfilPage usuarioActual={usuarioActual} />} />
+          <Route
+              path="/producto/:id"
+              element={<DetalleProducto agregarAlCarrito={agregarAlCarrito} />}
+           />
+        </Routes>
+      </main>
+      <Footer /> {}
     </div>
   );
 }

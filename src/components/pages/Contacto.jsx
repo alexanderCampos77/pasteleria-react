@@ -18,6 +18,9 @@ function Contacto() {
 
   const handleCloseModal = () => setShowSuccessModal(false);
 
+  const instagramLink = "https://www.instagram.com/ladanesapasteleria/";
+  const whatsappLink = "https://api.whatsapp.com/message/BZUVUFDCB2ION1?autoload=1&app_absent=0";
+
   return (
     <>
       <Container className="my-5">
@@ -28,14 +31,24 @@ function Contacto() {
               ¿Tienes alguna pregunta o quieres hacer un pedido especial?
               ¡No dudes en contactarnos!
             </p>
-            <p>
-              <strong>Dirección:</strong> barranca 123, San Antonio, Valparaíso
+            <p className="mt-4 mb-1">
+              🎂🍮Tortas y Postres hechos con ❤️
             </p>
-            <p>
-              <strong>Teléfono:</strong> +56 9 89861954
+            <p className="mb-1">
+              <strong>Teléfono/WhatsApp:</strong> <a href="tel:+56966285771">+56 9 6628 5771</a>
             </p>
-            <p>
+            <p className="mb-1">
+              <strong>Dirección:</strong> Vitacura 5610 (Envíos y Retiros inmediatos o programados📅)
+            </p>
+             {/* Note: Previous address/phone removed as new ones were provided */}
+            <p className="mb-4">
               <strong>Correo Electrónico:</strong> contacto@milsabores.cl
+            </p>
+            <p>
+              <strong>Síguenos:</strong><br/>
+               <a href={instagramLink} target="_blank" rel="noopener noreferrer" className="me-2">Instagram</a>
+               |
+               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="ms-2">WhatsApp Directo</a>
             </p>
           </Col>
           <Col md={6}>
