@@ -40,7 +40,7 @@ function Contacto() {
             <p className="mb-1">
               <strong>Dirección:</strong> Vitacura 5610 (Envíos y Retiros inmediatos o programados📅)
             </p>
-             {/* Note: Previous address/phone removed as new ones were provided */}
+             {}
             <p className="mb-4">
               <strong>Correo Electrónico:</strong> contacto@milsabores.cl
             </p>
