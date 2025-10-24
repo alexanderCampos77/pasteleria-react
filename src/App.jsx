@@ -8,7 +8,7 @@ import CarritoPage from './components/pages/CarritoPage.jsx';
 import LoginPage from './components/pages/LoginPage.jsx';
 import PerfilPage from './components/pages/PerfilPage.jsx';
 import DetalleProducto from './components/pages/DetalleProducto.jsx';
-import Footer from './components/Footer.jsx'; // 1. IMPORTAR FOOTER
+import Footer from './components/Footer.jsx';
 
 function App() {
   const [carrito, setCarrito] = useState([]);
