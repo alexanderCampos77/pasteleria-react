@@ -16,7 +16,7 @@ function CarritoPage({ carrito, setCarrito, usuarioActual }) {
   const handleComprar = () => {
     if (!usuarioActual) {
       alert('Debes registrarte o iniciar sesión para comprar.');
-      navigate('/registro'); // CAMBIO AQUÍ
+      navigate('/registro'); 
     } else {
       alert(`¡Gracias por tu compra, ${usuarioActual.nombre}! (Simulación)`);
       vaciarCarrito();
