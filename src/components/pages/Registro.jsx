@@ -11,7 +11,7 @@ function Registro({ registrarUsuario }) {
   });
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
-  const [registrationError, setRegistrationError] = useState(''); // For existing email error
+  const [registrationError, setRegistrationError] = useState('');
 
   const handleChange = (e) => {
     const { id, value } = e.target;
