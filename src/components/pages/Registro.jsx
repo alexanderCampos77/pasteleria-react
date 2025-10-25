@@ -1,8 +1,6 @@
-// src/components/pages/Registro.jsx (Updated)
 import React, { useState } from 'react';
 import { Container, Form, Button, Row, Col, Alert } from 'react-bootstrap';
 
-// 1. Receive registrarUsuario function
 function Registro({ registrarUsuario }) {
   const [formData, setFormData] = useState({
     nombre: '',
@@ -24,7 +22,6 @@ function Registro({ registrarUsuario }) {
   };
 
   const validarFormulario = () => {
-    // (Validation logic remains the same...)
     const { nombre, email, edad, telefono, fechaNacimiento } = formData;
     const newErrors = {};
     if (!nombre) newErrors.nombre = 'El nombre es obligatorio.';
@@ -49,20 +46,19 @@ function Registro({ registrarUsuario }) {
     e.preventDefault();
     setErrors({});
     setSuccessMessage('');
-    setRegistrationError(''); // Clear previous registration error
+    setRegistrationError(''); 
     const newErrors = validarFormulario();
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
     } else {
       try {
-         // 2. Call registrarUsuario from App.jsx
+         
          registrarUsuario(formData);
          setSuccessMessage(`¡Registro exitoso! ¡Bienvenido/a, ${formData.nombre}! Puedes iniciar sesión.`);
-         // Optionally clear the form:
-         // setFormData({ nombre: '', email: '', edad: '', telefono: '', fechaNacimiento: ''});
+        
       } catch (error) {
-         // Handle registration error (like existing email)
+         
          setRegistrationError(error.message);
       }
     }
