@@ -70,9 +70,9 @@ function Registro({ registrarUsuario }) {
         <Col md={6}>
           <h2>Regístrate</h2>
           {successMessage && <Alert variant="success">{successMessage}</Alert>}
-          {registrationError && <Alert variant="danger">{registrationError}</Alert>} {/* Show registration error */}
+          {registrationError && <Alert variant="danger">{registrationError}</Alert>} {}
           <Form noValidate onSubmit={handleSubmit}>
-            {/* Form Groups remain the same... */}
+            {}
             <Form.Group className="mb-3" controlId="nombre">
               <Form.Label>Nombre completo *</Form.Label>
               <Form.Control type="text" value={formData.nombre} onChange={handleChange} isInvalid={!!errors.nombre}/>
@@ -81,7 +81,7 @@ function Registro({ registrarUsuario }) {
             <Form.Group className="mb-3" controlId="email">
                <Form.Label>Correo electrónico *</Form.Label>
                <Form.Control type="email" value={formData.email} onChange={handleChange} isInvalid={!!errors.email || !!registrationError}/>
-               <Form.Control.Feedback type="invalid">{errors.email || registrationError}</Form.Control.Feedback> {/* Show validation or registration error */}
+               <Form.Control.Feedback type="invalid">{errors.email || registrationError}</Form.Control.Feedback> {}
             </Form.Group>
             <Form.Group className="mb-3" controlId="edad">
               <Form.Label>Edad</Form.Label>
